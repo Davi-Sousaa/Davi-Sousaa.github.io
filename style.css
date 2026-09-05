@@ -604,10 +604,6 @@ body::after {
 }
 
 @media (hover: hover) and (pointer: fine) {
-  body {
-    cursor: none;
-  }
-
   .cursor-orb {
     opacity: 1;
   }
