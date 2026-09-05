@@ -602,21 +602,7 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-/* Brilho azul inferior */
 
-body::after {
-  content: "";
-  position: fixed;
-  width: 450px;
-  height: 450px;
-  bottom: -250px;
-  right: -120px;
-  border-radius: 50%;
-  background: rgba(0, 80, 255, 0.18);
-  filter: blur(110px);
-  pointer-events: none;
-  z-index: 0;
-}
 /* ===== ORB AZUL DO CURSOR ===== */
 
 .cursor-orb {
