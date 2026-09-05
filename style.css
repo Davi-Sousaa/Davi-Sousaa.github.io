@@ -528,3 +528,77 @@ h2 {
 .contact-links .whatsapp-button:hover {
   opacity: 0.85;
 }
+/* ===== BOTÕES DE CONTATO ===== */
+
+.contact-links {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.contact-links a {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  min-height: 46px;
+  padding: 0 22px;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+  border-radius: 6px;
+
+  background: rgba(255, 255, 255, 0.03);
+
+  color: #ffffff;
+  text-decoration: none;
+
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
+
+  transition:
+    transform 0.2s ease,
+    border-color 0.2s ease,
+    background 0.2s ease,
+    box-shadow 0.2s ease;
+}
+
+/* GITHUB */
+
+.contact-links a:first-child {
+  border-color: rgba(255, 255, 255, 0.25);
+}
+
+.contact-links a:first-child:hover {
+  border-color: #1683ff;
+  background: rgba(22, 131, 255, 0.08);
+  box-shadow: 0 0 18px rgba(22, 131, 255, 0.18);
+  transform: translateY(-2px);
+}
+
+/* WHATSAPP */
+
+.contact-links .whatsapp-button {
+  border-color: rgba(37, 211, 102, 0.45);
+}
+
+.contact-links .whatsapp-button:hover {
+  border-color: #25d366;
+  background: rgba(37, 211, 102, 0.08);
+  box-shadow: 0 0 18px rgba(37, 211, 102, 0.18);
+  transform: translateY(-2px);
+}
+
+/* CELULAR */
+
+@media (max-width: 600px) {
+  .contact-links {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  .contact-links a {
+    width: 100%;
+  }
+}
