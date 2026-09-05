@@ -513,3 +513,18 @@ h2 {
   .skill small { display: none; }
   .footer { padding: 20px 22px; gap: 15px; flex-direction: column; }
 }
+.whatsapp-button {
+  display: inline-block;
+  margin-top: 15px;
+  padding: 12px 20px;
+  background: #25D366;
+  color: white !important;
+  text-decoration: none;
+  font-weight: bold;
+  border-radius: 6px;
+  transition: 0.2s;
+}
+
+.whatsapp-button:hover {
+  opacity: 0.85;
+}
