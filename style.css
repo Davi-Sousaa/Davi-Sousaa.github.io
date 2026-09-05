@@ -528,31 +528,32 @@ h2 {
 .contact-links .whatsapp-button:hover {
   opacity: 0.85;
 }
+```css
 /* ===== BOTÕES DE CONTATO ===== */
 
 .contact-links {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
   gap: 14px;
-  flex-wrap: wrap;
   width: 100%;
 }
+
 .contact-content {
   text-align: center;
 }
 
-.contact-links a {
-  white-space: nowrap;
-}
+.contact-card {
+  flex: 1;
+  max-width: 260px;
+  min-height: 72px;
+  padding: 14px 20px;
 
-.contact-links a {
-  display: inline-flex;
+  display: flex;
+  flex-direction: column;
   align-items: center;
   justify-content: center;
-
-  min-height: 46px;
-  padding: 0 22px;
+  gap: 5px;
 
   border: 1px solid rgba(255, 255, 255, 0.18);
   border-radius: 6px;
@@ -562,10 +563,6 @@ h2 {
   color: #ffffff;
   text-decoration: none;
 
-  font-size: 12px;
-  font-weight: 700;
-  letter-spacing: 0.08em;
-
   transition:
     transform 0.2s ease,
     border-color 0.2s ease,
@@ -573,13 +570,22 @@ h2 {
     box-shadow 0.2s ease;
 }
 
-/* GITHUB */
-
-.contact-links a:first-child {
-  border-color: rgba(255, 255, 255, 0.25);
+.contact-title {
+  font-size: 12px;
+  font-weight: 700;
+  letter-spacing: 0.08em;
 }
 
-.contact-links a:first-child:hover {
+.contact-description {
+  font-size: 10px;
+  font-weight: 400;
+  letter-spacing: 0.03em;
+  opacity: 0.55;
+}
+
+/* E-MAIL */
+
+.contact-links .email:hover {
   border-color: #1683ff;
   background: rgba(22, 131, 255, 0.08);
   box-shadow: 0 0 18px rgba(22, 131, 255, 0.18);
@@ -599,6 +605,15 @@ h2 {
   transform: translateY(-2px);
 }
 
+/* GITHUB */
+
+.contact-links .github:hover {
+  border-color: rgba(255, 255, 255, 0.5);
+  background: rgba(255, 255, 255, 0.06);
+  box-shadow: 0 0 18px rgba(255, 255, 255, 0.08);
+  transform: translateY(-2px);
+}
+
 /* CELULAR */
 
 @media (max-width: 600px) {
@@ -607,7 +622,9 @@ h2 {
     align-items: stretch;
   }
 
-  .contact-links a {
+  .contact-card {
     width: 100%;
+    max-width: none;
   }
 }
+```
