@@ -513,18 +513,18 @@ h2 {
   .skill small { display: none; }
   .footer { padding: 20px 22px; gap: 15px; flex-direction: column; }
 }
-.whatsapp-button {
-  display: inline-block;
-  margin-top: 15px;
-  padding: 12px 20px;
-  background: #25D366;
-  color: white !important;
-  text-decoration: none;
-  font-weight: bold;
-  border-radius: 6px;
-  transition: 0.2s;
+.contact-links .whatsapp-button {
+  display: inline-block !important;
+  margin-top: 15px !important;
+  padding: 12px 20px !important;
+  background-color: #25D366 !important;
+  color: #ffffff !important;
+  text-decoration: none !important;
+  font-weight: bold !important;
+  border-radius: 6px !important;
+  transition: opacity 0.2s ease;
 }
 
-.whatsapp-button:hover {
+.contact-links .whatsapp-button:hover {
   opacity: 0.85;
 }
