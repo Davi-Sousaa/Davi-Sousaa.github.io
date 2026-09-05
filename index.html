@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="Portfólio de Davi Sousa — futuro Software Developer.">
+  <title>Davi Sousa — Software Developer</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <div class="noise"></div>
+
+  <header class="header">
+    <a class="brand" href="#home" aria-label="Davi Sousa">
+      <span class="brand-mark">DS</span>
+      <span class="brand-text">/ SOFTWARE DEV</span>
+    </a>
+
+    <button class="menu-toggle" aria-label="Abrir menu">☰</button>
+
+    <nav class="nav">
+      <a class="active" href="#home">INÍCIO</a>
+      <a href="#about">ABOUT</a>
+      <a href="#skills">SKILLS</a>
+      <a href="#projects">PROJECTS</a>
+      <a href="#education">EDUCATION</a>
+      <a href="#contact">CONTACT</a>
+    </nav>
+  </header>
+
+  <main>
+    <section id="home" class="hero section">
+      <div class="hero-lines"></div>
+      <div class="hero-content">
+        <span class="eyebrow">› A FUTURE PROGRAMMER</span>
+        <h1>DAVI<br><span>SOUSA</span></h1>
+        <p class="role">SOFTWARE DEVELOPER</p>
+        <p class="hero-description">
+          Estudante de programação, começando minha jornada com Python,
+          lógica de programação e desenvolvimento de projetos.
+        </p>
+        <div class="actions">
+          <a class="btn primary" href="#projects">VER PROJETOS <span>→</span></a>
+          <a class="btn secondary" href="#contact">CONTATO <span>↗</span></a>
+        </div>
+      </div>
+      <div class="scroll">SCROLL <span></span></div>
+    </section>
+
+    <section id="about" class="section content-section">
+      <div class="section-label">01 / ABOUT</div>
+      <div class="section-grid">
+        <div>
+          <h2>COMEÇANDO A<br><span>CONSTRUIR.</span></h2>
+        </div>
+        <div class="text-block">
+          <p>
+            Sou Davi Sousa, estudante e futuro Software Developer. Atualmente
+            estou começando meus estudos em Python e lógica de programação,
+            construindo uma base sólida antes de avançar para projetos maiores.
+          </p>
+          <p>
+            Meu objetivo é cursar Engenharia de Software, trabalhar em uma
+            empresa de tecnologia e, no futuro, conquistar oportunidades
+            profissionais internacionais.
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <section id="skills" class="section content-section dark-section">
+      <div class="section-label">02 / SKILLS</div>
+      <div class="section-grid">
+        <div>
+          <h2>O QUE ESTOU<br><span>APRENDENDO.</span></h2>
+        </div>
+        <div class="skills-list">
+          <div class="skill"><span>01</span><strong>PYTHON</strong><small>EM APRENDIZADO</small></div>
+          <div class="skill"><span>02</span><strong>LÓGICA</strong><small>FUNDAMENTOS</small></div>
+          <div class="skill"><span>03</span><strong>GIT / GITHUB</strong><small>EM APRENDIZADO</small></div>
+          <div class="skill"><span>04</span><strong>JAVA</strong><small>PRÓXIMO PASSO</small></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="projects" class="section content-section">
+      <div class="section-label">03 / PROJECTS</div>
+      <div class="projects-heading">
+        <div>
+          <h2>PROJETOS<br><span>EM BREVE.</span></h2>
+          <p>Este espaço será atualizado conforme novos projetos forem publicados no GitHub.</p>
+        </div>
+        <a class="github-link" href="https://github.com/Davi-Sousaa" target="_blank" rel="noopener">GITHUB ↗</a>
+      </div>
+
+      <div id="projects-grid" class="projects-grid">
+        <article class="project-card empty-card">
+          <div class="project-number">00</div>
+          <div>
+            <h3>PRIMEIRO PROJETO</h3>
+            <p>Em construção. Um novo projeto aparecerá aqui quando for publicado.</p>
+          </div>
+          <span class="project-tag">PYTHON</span>
+        </article>
+      </div>
+    </section>
+
+    <section id="education" class="section content-section dark-section">
+      <div class="section-label">04 / EDUCATION</div>
+      <div class="education-card">
+        <span class="year">ATUALMENTE</span>
+        <div>
+          <h2>ENSINO MÉDIO</h2>
+          <p>2º ano · Colégio Estadual</p>
+        </div>
+        <span class="status">EM ANDAMENTO</span>
+      </div>
+      <div class="education-note">
+        <span>+</span>
+        <p>Próximo objetivo: Engenharia de Software e evolução contínua em desenvolvimento.</p>
+      </div>
+    </section>
+
+    <section id="contact" class="section contact-section">
+      <div class="section-label">05 / CONTACT</div>
+      <div class="contact-content">
+        <p class="eyebrow">› LET'S BUILD SOMETHING</p>
+        <h2>VAMOS<br><span>CONVERSAR.</span></h2>
+        <a class="email" href="mailto:davisousadasilva007@gmail.com">davisousadasilva007@gmail.com</a>
+        <div class="contact-links">
+          <a href="https://github.com/Davi-Sousaa" target="_blank" rel="noopener">GITHUB ↗</a>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <span>DS / SOFTWARE DEVELOPER</span>
+    <span>© <span id="year"></span> DAVI SOUSA</span>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
