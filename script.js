@@ -28,13 +28,3 @@ const observer = new IntersectionObserver((entries) => {
 sections.forEach(section => observer.observe(section));
 
 document.getElementById("year").textContent = new Date().getFullYear();
-// ===== ORB DO CURSOR =====
-
-const cursorOrb = document.querySelector(".cursor-orb");
-
-document.addEventListener("mousemove", (event) => {
-  if (cursorOrb) {
-    cursorOrb.style.left = `${event.clientX}px`;
-    cursorOrb.style.top = `${event.clientY}px`;
-  }
-});
