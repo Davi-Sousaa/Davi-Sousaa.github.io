@@ -533,8 +533,17 @@ h2 {
 .contact-links {
   display: flex;
   align-items: center;
+  justify-content: center;
   gap: 14px;
   flex-wrap: wrap;
+  width: 100%;
+}
+.contact-content {
+  text-align: center;
+}
+
+.contact-links a {
+  white-space: nowrap;
 }
 
 .contact-links a {
