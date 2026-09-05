@@ -528,27 +528,64 @@ h2 {
 .contact-links .whatsapp-button:hover {
   opacity: 0.85;
 }
-/* ===== FUNDO AZUL TECNOLÓGICO V2 ===== */
+/* ===== FUNDO PRETO + DETALHES AZUIS ===== */
 
 html,
 body {
-  background: #02040a !important;
+  background: #050505 !important;
 }
 
 body {
   position: relative;
   overflow-x: hidden;
-  background-image:
-    linear-gradient(rgba(0, 119, 255, 0.055) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 119, 255, 0.055) 1px, transparent 1px),
-    radial-gradient(circle at 50% 45%, rgba(0, 85, 255, 0.12), transparent 45%) !important;
 
-  background-size:
-    55px 55px,
-    55px 55px,
-    100% 100% !important;
+  background-image:
+    linear-gradient(
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ),
+    linear-gradient(
+      90deg,
+      rgba(255, 255, 255, 0.025) 1px,
+      transparent 1px
+    ) !important;
+
+  background-size: 70px 70px !important;
 }
 
+/* ORB AZUL SUPERIOR */
+body::before {
+  content: "";
+  position: fixed;
+  width: 500px;
+  height: 500px;
+  top: -300px;
+  right: -180px;
+
+  border-radius: 50%;
+  background: rgba(30, 130, 255, 0.10);
+  filter: blur(120px);
+
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* ORB AZUL INFERIOR */
+body::after {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  bottom: -280px;
+  left: -180px;
+
+  border-radius: 50%;
+  background: rgba(30, 130, 255, 0.08);
+  filter: blur(120px);
+
+  pointer-events: none;
+  z-index: 0;
+}
 /* Brilho azul superior */
 
 body::before {
@@ -565,7 +602,6 @@ body::before {
   pointer-events: none;
   z-index: 0;
 }
-
 /* Brilho azul inferior */
 
 body::after {
