@@ -528,3 +528,53 @@ h2 {
 .contact-links .whatsapp-button:hover {
   opacity: 0.85;
 }
+/* ===== FUNDO AZUL TECNOLÓGICO ===== */
+
+body {
+  background-color: #030712 !important;
+  background-image:
+    radial-gradient(circle at 15% 20%, rgba(0, 110, 255, 0.18), transparent 28%),
+    radial-gradient(circle at 85% 15%, rgba(0, 60, 255, 0.14), transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(0, 120, 255, 0.12), transparent 30%),
+    linear-gradient(rgba(20, 100, 255, 0.045) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(20, 100, 255, 0.045) 1px, transparent 1px) !important;
+
+  background-size:
+    auto,
+    auto,
+    auto,
+    70px 70px,
+    70px 70px !important;
+}
+
+/* Brilho azul no canto superior */
+
+body::before {
+  content: "";
+  position: fixed;
+  width: 450px;
+  height: 450px;
+  top: -200px;
+  right: -150px;
+  border-radius: 50%;
+  background: rgba(0, 90, 255, 0.20);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -1;
+}
+
+/* Brilho azul no canto inferior */
+
+body::after {
+  content: "";
+  position: fixed;
+  width: 400px;
+  height: 400px;
+  bottom: -180px;
+  left: -150px;
+  border-radius: 50%;
+  background: rgba(0, 80, 255, 0.18);
+  filter: blur(100px);
+  pointer-events: none;
+  z-index: -1;
+}
