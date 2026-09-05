@@ -632,3 +632,31 @@ padding: 12px 18px;
     max-width: none;
   }
 }
+/* ===== ÍCONES DOS CONTATOS ===== */
+
+.contact-title {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 7px;
+}
+
+.contact-icon {
+  font-size: 14px;
+  line-height: 1;
+}
+
+/* E-MAIL */
+.contact-card.email .contact-icon {
+  color: #1683ff;
+}
+
+/* WHATSAPP */
+.contact-card.whatsapp-button .contact-icon {
+  color: #25d366;
+}
+
+/* GITHUB */
+.contact-card.github .contact-icon {
+  color: #ffffff;
+}
