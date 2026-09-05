@@ -513,6 +513,7 @@ h2 {
   .skill small { display: none; }
   .footer { padding: 20px 22px; gap: 15px; flex-direction: column; }
 }
+
 .contact-links .whatsapp-button {
   display: inline-block !important;
   margin-top: 15px !important;
