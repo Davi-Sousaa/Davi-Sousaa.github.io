@@ -581,3 +581,40 @@ body::after {
   pointer-events: none;
   z-index: 0;
 }
+/* ===== ORB AZUL DO CURSOR ===== */
+
+.cursor-orb {
+  position: fixed;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #1683ff;
+  box-shadow:
+    0 0 8px #1683ff,
+    0 0 20px #1683ff,
+    0 0 40px rgba(0, 110, 255, 0.7);
+  pointer-events: none;
+  z-index: 99999;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition:
+    width 0.2s ease,
+    height 0.2s ease,
+    opacity 0.2s ease;
+}
+
+@media (hover: hover) and (pointer: fine) {
+  body {
+    cursor: none;
+  }
+
+  .cursor-orb {
+    opacity: 1;
+  }
+}
+
+@media (hover: none) {
+  .cursor-orb {
+    display: none;
+  }
+}
