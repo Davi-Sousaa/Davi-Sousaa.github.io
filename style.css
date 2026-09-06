@@ -681,21 +681,26 @@ h2 {
 }
 
 .contact-icon {
-  font-size: 14px;
-  line-height: 1;
+  width: 14px;
+  height: 14px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
 }
 
 /* E-MAIL */
-.contact-card.email .contact-icon {
+.email-icon {
   color: #1683ff;
+  font-size: 14px;
 }
 
 /* WHATSAPP */
-.contact-card.whatsapp-button .contact-icon {
-  color: #25d366;
+.whatsapp-icon {
+  fill: #25d366;
 }
 
 /* GITHUB */
-.contact-card.github .contact-icon {
-  color: #ffffff;
+.github-icon {
+  fill: #ffffff;
 }
