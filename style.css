@@ -671,6 +671,7 @@ h2 {
     max-width: none;
   }
 }
+
 /* ===== ÍCONES DOS CONTATOS ===== */
 
 .contact-title {
@@ -685,11 +686,13 @@ h2 {
   height: 14px;
   flex: 0 0 14px;
 }
+
 /* E-MAIL */
 .email-icon {
   color: #1683ff;
   font-size: 14px;
 }
+
 /* WHATSAPP */
 .whatsapp-icon {
   fill: #128C4A;
