@@ -697,6 +697,8 @@ h2 {
 
 /* WHATSAPP */
 .whatsapp-icon {
+  width: 14px;
+  height: 14px;
   fill: #128C4A;
 }
 
