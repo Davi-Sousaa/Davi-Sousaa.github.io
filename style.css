@@ -727,6 +727,11 @@ a { color: inherit; text-decoration: none; }
   .next-goal { gap: 8px; }
 
   .contact-card { min-height: 82px; }
+  
+  .calculator-showcase img {
+    width: 210%;
+    max-width: none;
+  }
 }
 /* =========================
    CALCULATOR PROJECT
