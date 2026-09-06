@@ -684,21 +684,21 @@ h2 {
 .contact-icon {
   width: 14px;
   height: 14px;
+  display: inline-block;
   flex: 0 0 14px;
 }
 
 /* E-MAIL */
 .email-icon {
-  color: #005aff;
-  font-size: 14px;
+  fill: #1683ff;
 }
 
 /* WHATSAPP */
 .whatsapp-icon {
-  fill: #1a753c;
+  fill: #128C4A;
 }
 
 /* GITHUB */
 .github-icon {
-  fill: #e2ece7;
+  fill: #ffffff;
 }
