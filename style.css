@@ -683,22 +683,15 @@ h2 {
 .contact-icon {
   width: 14px;
   height: 14px;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  flex-shrink: 0;
+  flex: 0 0 14px;
 }
-
 /* E-MAIL */
 .email-icon {
   color: #1683ff;
   font-size: 14px;
 }
-
 /* WHATSAPP */
 .whatsapp-icon {
-  width: 14px;
-  height: 14px;
   fill: #128C4A;
 }
 
