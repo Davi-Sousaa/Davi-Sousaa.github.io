@@ -1,30 +1,52 @@
-const menuButton = document.querySelector(".menu-toggle");
+const menuButton = document.querySelector(".menu-button");
 const nav = document.querySelector(".nav");
 
-menuButton.addEventListener("click", () => {
-  nav.classList.toggle("open");
-});
+if (menuButton) {
+  menuButton.addEventListener("click", () => {
+    const opened = nav.classList.toggle("open");
+    menuButton.setAttribute("aria-expanded", opened);
+  });
+}
 
 document.querySelectorAll(".nav a").forEach(link => {
-  link.addEventListener("click", () => nav.classList.remove("open"));
+  link.addEventListener("click", () => {
+    nav.classList.remove("open");
+    menuButton?.setAttribute("aria-expanded", "false");
+  });
 });
 
-const sections = document.querySelectorAll("section[id]");
-const navLinks = document.querySelectorAll(".nav a");
+const revealItems = document.querySelectorAll(".reveal");
 
 const observer = new IntersectionObserver((entries) => {
   entries.forEach(entry => {
     if (entry.isIntersecting) {
-      navLinks.forEach(link => {
-        link.classList.toggle(
-          "active",
-          link.getAttribute("href") === `#${entry.target.id}`
-        );
-      });
+      entry.target.classList.add("visible");
+      observer.unobserve(entry.target);
     }
   });
-}, { rootMargin: "-35% 0px -55% 0px" });
+}, { threshold: 0.12 });
 
-sections.forEach(section => observer.observe(section));
+revealItems.forEach(item => observer.observe(item));
 
-document.getElementById("year").textContent = new Date().getFullYear();
+const cursorDot = document.querySelector(".cursor-dot");
+const cursorRing = document.querySelector(".cursor-ring");
+
+if (window.matchMedia("(pointer: fine)").matches && cursorDot && cursorRing) {
+  window.addEventListener("mousemove", (event) => {
+    cursorDot.style.left = `${event.clientX}px`;
+    cursorDot.style.top = `${event.clientY}px`;
+
+    cursorRing.animate(
+      {
+        left: `${event.clientX}px`,
+        top: `${event.clientY}px`
+      },
+      { duration: 120, fill: "forwards", easing: "ease-out" }
+    );
+  });
+
+  document.querySelectorAll("a, button").forEach(el => {
+    el.addEventListener("mouseenter", () => cursorRing.classList.add("active"));
+    el.addEventListener("mouseleave", () => cursorRing.classList.remove("active"));
+  });
+}

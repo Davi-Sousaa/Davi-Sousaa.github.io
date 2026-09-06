@@ -1,19 +1,16 @@
 # Davi Sousa — Portfolio
 
-Portfólio pessoal em HTML, CSS e JavaScript puro.
+Portfólio pessoal estático para GitHub Pages.
 
-## Arquivos
+## Estrutura
 
-- `index.html` — estrutura do site
-- `style.css` — visual, responsividade e animações
-- `script.js` — menu mobile e navegação
+- `index.html` — conteúdo e estrutura
+- `style.css` — visual e responsividade
+- `script.js` — menu mobile, animações e cursor
+- `favicon.svg` — ícone DS
+- `assets/profile.jpg` — foto do perfil
 
-## Como publicar no GitHub Pages
+## Publicação
 
-1. Crie um repositório chamado `Davi-Sousaa.github.io` no GitHub.
-2. Envie `index.html`, `style.css` e `script.js` para a branch `main`.
-3. No GitHub, abra **Settings → Pages**.
-4. Em **Build and deployment**, selecione a branch `main`.
-5. Salve e aguarde a publicação.
-
-Quando você começar a publicar projetos, a seção `PROJECTS` pode ser atualizada para mostrar cards reais com links para os repositórios.
+No GitHub, deixe `index.html` na raiz do repositório e configure:
+Settings → Pages → Deploy from a branch → main → /(root).
