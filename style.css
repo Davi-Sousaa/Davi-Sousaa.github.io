@@ -634,13 +634,13 @@ h2 {
 /* WHATSAPP */
 
 .contact-card.whatsapp-button {
-  border-color: rgba(37, 211, 102, 0.45);
+  border-color: rgba(18, 140, 74, 0.45);
 }
 
 .contact-card.whatsapp-button:hover {
-  border-color: #25d366;
-  background: rgba(37, 211, 102, 0.08);
-  box-shadow: 0 0 18px rgba(37, 211, 102, 0.18);
+  border-color: #128C4A;
+  background: rgba(18, 140, 74, 0.08);
+  box-shadow: 0 0 18px rgba(18, 140, 74, 0.18);
   transform: translateY(-2px);
 }
 
@@ -697,7 +697,7 @@ h2 {
 
 /* WHATSAPP */
 .whatsapp-icon {
-  fill: #25d366;
+  fill: #128C4A;
 }
 
 /* GITHUB */
