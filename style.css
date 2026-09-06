@@ -686,11 +686,20 @@ a { color: inherit; text-decoration: none; }
   .hero-grid,
   .about-grid { grid-template-columns: 1fr; }
 
-  .hero-side { display: none; }
+   .hero-side { display: none; }
   .about-grid { gap: 50px; }
   .portrait-wrap { order: -1; }
   .project-card { grid-template-columns: 60px 1fr; }
   .project-status { grid-column: 2; justify-self: start; }
+
+  .calculator-showcase {
+    padding: 20px;
+  }
+
+  .calculator-showcase img {
+    width: 100%;
+    max-width: 500px;
+  }
 }
 
 @media (max-width: 620px) {
