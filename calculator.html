@@ -113,37 +113,137 @@
 
   </div>
 
-  <script>
-    const display = document.getElementById("display");
+<script>
+  const display = document.getElementById("display");
 
-    function addNumber(number) {
-      if (display.innerText === "0") {
-        display.innerText = number;
-      } else {
-        display.innerText += number;
+  function addNumber(number) {
+    // Impede começar uma conta com operadores
+    if (
+      display.innerText === "0" &&
+      ["+", "-", "*", "/", "%"].includes(number)
+    ) {
+      return;
+    }
+
+    // Depois de um resultado, começar um número novo
+    if (display.innerText === "Erro") {
+      display.innerText = number;
+      return;
+    }
+
+    // Evita colocar dois pontos no mesmo número
+    if (number === ".") {
+      const parts = display.innerText.split(/[\+\-\*\/]/);
+      const currentNumber = parts[parts.length - 1];
+
+      if (currentNumber.includes(".")) {
+        return;
       }
     }
 
-    function clearDisplay() {
+    // Evita dois operadores seguidos
+    if (["+", "-", "*", "/"].includes(number)) {
+      const lastChar = display.innerText.slice(-1);
+
+      if (["+", "-", "*", "/"].includes(lastChar)) {
+        display.innerText =
+          display.innerText.slice(0, -1) + number;
+        return;
+      }
+    }
+
+    // Se o display estiver em 0, substitui
+    if (display.innerText === "0") {
+      display.innerText = number;
+    } else {
+      display.innerText += number;
+    }
+  }
+
+  function clearDisplay() {
+    display.innerText = "0";
+  }
+
+  function deleteNumber() {
+    display.innerText = display.innerText.slice(0, -1);
+
+    if (display.innerText === "") {
       display.innerText = "0";
     }
+  }
 
-    function deleteNumber() {
-      display.innerText = display.innerText.slice(0, -1);
+  function calculate() {
+    try {
+      let expression = display.innerText;
 
-      if (display.innerText === "") {
-        display.innerText = "0";
+      // Verifica se existe uma porcentagem
+      if (expression.includes("%")) {
+
+        /*
+          Exemplos:
+
+          50%       → 50 / 100
+          200*10%   → 200*10/100
+          100+20%   → 100+(100*20/100)
+          100-20%   → 100-(100*20/100)
+        */
+
+        expression = expression.replace(
+          /(\d+(?:\.\d+)?)%/g,
+          function(match, number, offset, fullExpression) {
+
+            // Procura o operador antes da porcentagem
+            const before = fullExpression.slice(0, offset);
+
+            const lastOperator = before.match(/[\+\-\*\/]/);
+
+            // Porcentagem simples: 50% = 0.5
+            if (!lastOperator) {
+              return `(${number}/100)`;
+            }
+
+            const operator = lastOperator[0];
+
+            // Para + e -, calcula a porcentagem em relação
+            // ao número que está antes do operador.
+            if (operator === "+" || operator === "-") {
+              const numberBeforeOperator =
+                before.slice(0, before.lastIndexOf(operator))
+                      .match(/(\d+(?:\.\d+)?)$/);
+
+              if (numberBeforeOperator) {
+                const base = numberBeforeOperator[1];
+
+                return `(${base}*${number}/100)`;
+              }
+            }
+
+            // Para multiplicação e divisão,
+            // porcentagem vira número / 100.
+            return `(${number}/100)`;
+          }
+        );
       }
-    }
 
-    function calculate() {
-      try {
-        display.innerText = eval(display.innerText);
-      } catch {
+      const result = eval(expression);
+
+      if (!isFinite(result)) {
         display.innerText = "Erro";
+        return;
       }
+
+      // Remove casas decimais desnecessárias
+      display.innerText =
+        Number.isInteger(result)
+          ? result
+          : parseFloat(result.toFixed(10));
+
+    } catch {
+      display.innerText = "Erro";
     }
-  </script>
+  }
+</script>
+
 
 </body>
 </html>
