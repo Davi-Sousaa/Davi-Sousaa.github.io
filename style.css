@@ -422,7 +422,7 @@ a { color: inherit; text-decoration: none; }
   min-height: 150px;
   padding: 24px;
   display: grid;
-  grid-template-columns: 45px 1fr 25px;
+  grid-template-columns: 45px 50px 1fr 25px;
   align-items: center;
   gap: 15px;
   border: 1px solid var(--line);
