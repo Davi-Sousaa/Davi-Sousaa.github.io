@@ -457,6 +457,34 @@ a { color: inherit; text-decoration: none; }
   height: 38px;
   display: block;
 }
+/* CORES DOS ÍCONES */
+.skill-card:nth-child(2) .skill-icon {
+  color: #ffffff;
+}
+
+.skill-card:nth-child(3) .skill-icon {
+  color: #ffffff;
+}
+
+.skill-card:nth-child(4) .skill-icon {
+  color: #f89820;
+}
+
+.skill-card:nth-child(5) .skill-icon {
+  color: #e34f26;
+}
+
+.skill-card:nth-child(6) .skill-icon {
+  color: #1572b6;
+}
+
+.skill-card:nth-child(2) .skill-icon svg,
+.skill-card:nth-child(3) .skill-icon svg,
+.skill-card:nth-child(4) .skill-icon svg,
+.skill-card:nth-child(5) .skill-icon svg,
+.skill-card:nth-child(6) .skill-icon svg {
+  fill: currentColor;
+}
 .project-intro {
   display: flex;
   justify-content: space-between;
