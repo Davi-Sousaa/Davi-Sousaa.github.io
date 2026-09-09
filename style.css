@@ -773,24 +773,3 @@ a { color: inherit; text-decoration: none; }
   letter-spacing: .1em;
   text-align: center;
 }
-/* ===== AJUSTE DOS ÍCONES NO CELULAR ===== */
-
-@media (max-width: 768px) {
-
-  .skill-icon {
-    width: 45px !important;
-    height: 45px !important;
-    display: flex !important;
-    align-items: center !important;
-    justify-content: center !important;
-  }
-
-  .skill-icon svg {
-    width: 42px !important;
-    height: 42px !important;
-    max-width: 42px !important;
-    max-height: 42px !important;
-    display: block !important;
-  }
-
-}
