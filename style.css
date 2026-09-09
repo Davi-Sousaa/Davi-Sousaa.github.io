@@ -443,6 +443,20 @@ a { color: inherit; text-decoration: none; }
 .skill-card p { color: #687486; font-size: 10px; margin-top: 4px; }
 .skill-arrow { color: var(--blue); }
 
+.skill-icon {
+  width: 50px;
+  height: 50px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.skill-icon svg {
+  width: 38px;
+  height: 38px;
+  display: block;
+}
 .project-intro {
   display: flex;
   justify-content: space-between;
